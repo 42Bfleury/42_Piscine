@@ -6,16 +6,15 @@
 /*   By: Bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/29 15:59:15 by Bfleury           #+#    #+#             */
-/*   Updated: 2016/02/29 16:16:12 by Bfleury          ###   ########.fr       */
+/*   Updated: 2016/03/02 17:35:27 by Bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.h"
 
-void	ft_putstr(char *str)
+int		ft_putchar(char c)
 {
-	while (*str++)
-		ft_putchar(*(str - 1));
+	return (write(1, &c, 1));
 }
 
 int		main(void)

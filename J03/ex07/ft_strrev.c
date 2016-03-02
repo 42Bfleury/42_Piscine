@@ -6,13 +6,13 @@
 /*   By: Bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 02:15:56 by Bfleury           #+#    #+#             */
-/*   Updated: 2016/03/01 00:03:26 by Bfleury          ###   ########.fr       */
+/*   Updated: 2016/03/02 17:22:58 by Bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.h"
 
-int		ft_strlen(char *str)
+static int	ft_strlen(char *str)
 {
 	char *tmp;
 
@@ -22,7 +22,7 @@ int		ft_strlen(char *str)
 	return (tmp - str);
 }
 
-char	*ft_strrev(char *str)
+char		*ft_strrev(char *str)
 {
 	int		i;
 	int		j;

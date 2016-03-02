@@ -6,13 +6,13 @@
 /*   By: Bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/27 07:14:42 by Bfleury           #+#    #+#             */
-/*   Updated: 2016/02/29 18:38:48 by Bfleury          ###   ########.fr       */
+/*   Updated: 2016/03/02 17:44:08 by Bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "sastantua.h"
 
-int		get_nb_floor(int size)
+static int		get_nb_floor(int size)
 {
 	int		i;
 	int		result;
@@ -24,12 +24,12 @@ int		get_nb_floor(int size)
 	return (result);
 }
 
-int		get_step(int i0, int i1)
+static int		get_step(int i0, int i1)
 {
 	return (get_nb_floor(i0 - 1) + i1);
 }
 
-void	fill_sastantua(int size, int nb_floor, int nb_brick, int step)
+static void		fill_sastantua(int size, int nb_floor, int nb_brick, int step)
 {
 	int		i;
 
@@ -50,7 +50,7 @@ void	fill_sastantua(int size, int nb_floor, int nb_brick, int step)
 			ft_putchar('*');
 }
 
-void	sastantua(int size)
+void			sastantua(int size)
 {
 	int		i[3];
 	int		nb_floor;

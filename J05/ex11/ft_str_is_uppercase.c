@@ -6,9 +6,11 @@
 /*   By: Bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/29 04:56:37 by Bfleury           #+#    #+#             */
-/*   Updated: 2016/02/29 09:42:20 by Bfleury          ###   ########.fr       */
+/*   Updated: 2016/03/02 16:48:26 by Bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "main.h"
 
 int		ft_str_is_uppercase(char *str)
 {

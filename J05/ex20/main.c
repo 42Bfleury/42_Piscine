@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.h                                             :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/29 23:54:18 by Bfleury           #+#    #+#             */
-/*   Updated: 2016/03/02 17:01:12 by Bfleury          ###   ########.fr       */
+/*   Created: 2016/03/02 18:01:39 by Bfleury           #+#    #+#             */
+/*   Updated: 2016/03/02 20:27:30 by Bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MAIN_H
-# define MAIN_H
-# include <stdio.h>
+#include "main.h"
 
-char	*ft_strrev(char *str);
+int		ft_putchar(char c)
+{
+	return (write(1, &c, 1));
+}
 
-#endif
+int		main(void)
+{
+	char *str;
+
+	str = "C'est qui le patron ?";
+	ft_print_memory(str, 1);
+	return (0);
+}

@@ -6,9 +6,11 @@
 /*   By: Bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/29 05:00:54 by Bfleury           #+#    #+#             */
-/*   Updated: 2016/02/29 09:48:38 by Bfleury          ###   ########.fr       */
+/*   Updated: 2016/03/02 16:47:52 by Bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "main.h"
 
 int		ft_str_is_printable(char *str)
 {

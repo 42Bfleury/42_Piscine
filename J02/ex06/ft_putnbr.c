@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: Bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/23 16:24:54 by Bfleury           #+#    #+#             */
-/*   Updated: 2016/03/02 08:39:51 by Bfleury          ###   ########.fr       */
+/*   Created: 2016/03/02 11:11:05 by Bfleury           #+#    #+#             */
+/*   Updated: 2016/03/02 11:14:44 by Bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ void	ft_putnbr(int nb)
 	if (nb < 0)
 		ft_putchar('-');
 	if (nb <= -10 || 10 <= nb)
-		ft_putnbr((nb < 0) ? -(nb / 10) : nb / 10);
-	ft_putchar((nb > 0) ? ((nb % 10) + '0') : (-(nb % 10) + '0'));
+		ft_putnbr((nb < 0) ? -(nb / 10) : (nb / 10));
+	ft_putchar((nb > 0) ? ('0' + (nb % 10)) : ('0' + -(nb % 10)));
 }

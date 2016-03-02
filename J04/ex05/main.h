@@ -6,13 +6,13 @@
 /*   By: Bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/01 23:46:57 by Bfleury           #+#    #+#             */
-/*   Updated: 2016/03/01 23:53:59 by Bfleury          ###   ########.fr       */
+/*   Updated: 2016/03/02 17:47:53 by Bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MAIN_H
 # define MAIN_H
-#include <stdio.h>
+# include <stdio.h>
 
 int		ft_sqrt(int nb);
 

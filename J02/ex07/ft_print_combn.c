@@ -6,15 +6,16 @@
 /*   By: Bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/23 18:55:24 by Bfleury           #+#    #+#             */
-/*   Updated: 2016/02/29 16:18:47 by Bfleury          ###   ########.fr       */
+/*   Updated: 2016/03/02 17:35:23 by Bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.h"
 
-int		ft_putchar(char c)
+void	ft_putstr(char *str)
 {
-	return (write(1, &c, 1));
+	while (*str++)
+		ft_putchar(*(str - 1));
 }
 
 void	ft_print_combn(int n)

@@ -6,13 +6,13 @@
 /*   By: Bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/29 05:31:57 by Bfleury           #+#    #+#             */
-/*   Updated: 2016/03/02 08:14:58 by Bfleury          ###   ########.fr       */
+/*   Updated: 2016/03/02 16:46:12 by Bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.h"
 
-int		ft_strlen(char *str)
+static int	ft_strlen(char *str)
 {
 	char	*ptr;
 
@@ -22,7 +22,7 @@ int		ft_strlen(char *str)
 	return (ptr - str);
 }
 
-char	*ft_strncat(char *dest, char *src, int nb)
+char		*ft_strncat(char *dest, char *src, int nb)
 {
 	int		i;
 	int		dest_len;

@@ -6,9 +6,11 @@
 /*   By: Bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/29 02:13:52 by Bfleury           #+#    #+#             */
-/*   Updated: 2016/03/02 05:30:52 by Bfleury          ###   ########.fr       */
+/*   Updated: 2016/03/02 16:56:40 by Bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "main.h"
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {

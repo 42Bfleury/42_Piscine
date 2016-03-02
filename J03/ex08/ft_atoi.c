@@ -6,7 +6,7 @@
 /*   By: Bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 03:10:16 by Bfleury           #+#    #+#             */
-/*   Updated: 2016/03/01 00:45:51 by Bfleury          ###   ########.fr       */
+/*   Updated: 2016/03/02 12:35:54 by Bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ int		ft_atoi(char *str)
 	if ((negative = 0) || *str == '-' || *str == '+')
 		negative = ((*str++ == '-') ? 1 : 0);
 	while (*str >= '0' && *str <= '9')
-		result = (result * 10) + (*str++ - '0');
+		result = ((result * 10) + (*str++ - '0'));
 	return ((negative) ? -result : result);
 }

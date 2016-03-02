@@ -5,15 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: Bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/29 23:54:18 by Bfleury           #+#    #+#             */
-/*   Updated: 2016/03/02 17:01:12 by Bfleury          ###   ########.fr       */
+/*   Created: 2016/03/02 10:42:03 by Bfleury           #+#    #+#             */
+/*   Updated: 2016/03/02 16:42:08 by Bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MAIN_H
 # define MAIN_H
 # include <stdio.h>
+# include <string.h>
 
-char	*ft_strrev(char *str);
+int		ft_atoi_base(char *str, char *base);
 
 #endif
