@@ -6,7 +6,7 @@
 /*   By: Bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/02 18:01:39 by Bfleury           #+#    #+#             */
-/*   Updated: 2016/03/02 20:27:30 by Bfleury          ###   ########.fr       */
+/*   Updated: 2016/03/03 02:54:39 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int		main(void)
 	char *str;
 
 	str = "C'est qui le patron ?";
-	ft_print_memory(str, 1);
+	ft_print_memory(str, 160);
 	return (0);
 }

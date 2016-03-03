@@ -6,7 +6,7 @@
 /*   By: Bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/02 18:01:51 by Bfleury           #+#    #+#             */
-/*   Updated: 2016/03/02 23:54:30 by Bfleury          ###   ########.fr       */
+/*   Updated: 2016/03/03 03:08:02 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,11 @@ static void		ft_putnbr_base(int nbr, char *base)
 	b = 0;
 	while (base[b++])
 		;
-	if (b > 2)
+	if (--b > 2)
 	{
-		if (nbr < 0)
-			ft_putchar('-');
 		if (nbr <= -b || b <= nbr)
 			ft_putnbr_base(((nbr < 0) ? -(nbr / b) : nbr / b), base);
-		ft_putchar((nbr > 0) ? base[nbr % b] : base[-(nbr % b)]);
+		ft_putchar((nbr > 0) ? base[nbr % b] : base[0]);
 	}
 }
 
@@ -42,52 +40,38 @@ static int		ft_get_char(char *str)
 	return (*str);
 }
 
-static int		ft_atoi_base(char *str, char *base)
+static void		ft_putstr(char *str)
 {
-	int		i;
-
-	while (base[i++])
-		;
-	return (((*str / i) * 10) + (*str % i));
+	while (*str++)
+		ft_putchar(*(str - 1));
 }
 
 void			*ft_print_memory(void *addr, unsigned int size)
 {
 	unsigned int	i;
 	unsigned int	j;
-	char			*hexbase;
+	void			*k;
+	char			l;
 
 	i = 0;
-	j = 0;
-	hexbase = "0123456789abcdef";
-	while (size > i && (i += 16))
+	while (size > i && (i += 16) && (j = 0x10000000))
 	{
-		j = 0x10000000;
 		while ((long)addr < (j /= 16))
 			ft_putchar('0');
-		ft_putnbr_base((long)addr, hexbase);
-		ft_putchar(':');
-		ft_putchar(' ');
-		j = 0;
-		while (j++ < 16)
+		ft_putnbr_base((long)(addr + i - 16), "0123456789abcdef");
+		ft_putstr((j = 0) ? ": " : ": ");
+		while (j++ < 16 || (j = 0))
 		{
-			if ((i + j - 17) < size)
+			if ((k = (addr + i + j - 17)) < (addr + size))
 			{
-				if (ft_get_char(addr + i + j - 17) < 16)
-					ft_putchar('0');
-				ft_putnbr_base(ft_atoi_base((addr + i + j - 17), "0123456789"), hexbase);
+				ft_putstr((-16 < (l = ft_get_char(k)) && l < 16) ? "0" : "");
+				ft_putnbr_base(ft_get_char(k), "0123456789abcdef");
 			}
-			else
-			{
-				ft_putchar(' ');
-				ft_putchar(' ');
-			}
-			if ((j + 1) % 2)
-				ft_putchar(' ');
+			ft_putstr((k < (addr + size)) ? "" : " ");
+			ft_putstr(((j + 1) % 2) ? " " : "");
 		}
-		j = 0;
-		while (j++ < 16 && ((i + j - 17) < size))
-			ft_print_non_printable(addr + i + j - 17);
+		while (j++ < 16 && ((k = (addr + i + j - 17)) < (addr + size)))
+			ft_print_non_printable(k);
 		ft_putchar('\n');
 	}
 	return (addr);
