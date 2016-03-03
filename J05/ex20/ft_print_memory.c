@@ -6,7 +6,7 @@
 /*   By: Bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/02 18:01:51 by Bfleury           #+#    #+#             */
-/*   Updated: 2016/03/03 03:08:02 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/03/03 07:21:15 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,13 +60,11 @@ void			*ft_print_memory(void *addr, unsigned int size)
 			ft_putchar('0');
 		ft_putnbr_base((long)(addr + i - 16), "0123456789abcdef");
 		ft_putstr((j = 0) ? ": " : ": ");
-		while (j++ < 16 || (j = 0))
+		while (j++ < 16  || (j = 0))
 		{
-			if ((k = (addr + i + j - 17)) < (addr + size))
-			{
-				ft_putstr((-16 < (l = ft_get_char(k)) && l < 16) ? "0" : "");
-				ft_putnbr_base(ft_get_char(k), "0123456789abcdef");
-			}
+			k = addr + i + j  -17;
+			ft_putstr((-16 < (l = ft_get_char(k)) && l < 16) ? "0" : "");
+			ft_putnbr_base(ft_get_char(k), (k < (addr + size)) ? "0123456789abcdef" : "");
 			ft_putstr((k < (addr + size)) ? "" : " ");
 			ft_putstr(((j + 1) % 2) ? " " : "");
 		}
