@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/29 03:14:41 by Bfleury           #+#    #+#             */
-/*   Updated: 2016/03/07 17:26:00 by Bfleury          ###   ########.fr       */
+/*   Created: 2016/03/07 14:35:43 by Bfleury           #+#    #+#             */
+/*   Updated: 2016/03/07 14:37:24 by Bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "main.h"
-
-int		ft_strcmp(char *s1, char *s2)
+int		ft_strlen(char *str)
 {
-	while ((*s1 || *s2) && *s1++ == *s2++)
-		;
-	return (*--s1 - *--s2);
+	char	*ptr;
+
+	ptr = str;
+	while (*ptr)
+		ptr++;
+	return (ptr - str);
 }

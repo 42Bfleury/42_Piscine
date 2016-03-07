@@ -6,7 +6,7 @@
 /*   By: Bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/29 05:50:13 by Bfleury           #+#    #+#             */
-/*   Updated: 2016/03/02 06:03:57 by Bfleury          ###   ########.fr       */
+/*   Updated: 2016/03/07 17:27:35 by Bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,18 @@ int		main(void)
 	s2 = "Hello World";
 	test(s1, s2);
 	printf("________________________________________\n\n");
-	s1 = "Hello World";
-	s2 = "hello world";
-	test(s1, s2);
+	test(s2, s1);
 	printf("________________________________________\n\n");
 	s1 = "Hello World.";
 	s2 = "Hello World";
 	test(s1, s2);
 	printf("________________________________________\n\n");
-	s1 = "Hello World";
-	s2 = "Hello World.";
+	test(s2, s1);
+	printf("________________________________________\n\n");
+	s1 = "test1";
+	s2 = "test2";
 	test(s1, s2);
+	printf("________________________________________\n\n");
+	test(s2, s1);
 	return (0);
 }

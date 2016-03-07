@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/29 03:14:41 by Bfleury           #+#    #+#             */
-/*   Updated: 2016/03/07 17:26:00 by Bfleury          ###   ########.fr       */
+/*   Created: 2016/03/07 15:09:12 by Bfleury           #+#    #+#             */
+/*   Updated: 2016/03/07 15:25:20 by Bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.h"
 
-int		ft_strcmp(char *s1, char *s2)
+void	ft_print_program_name(char *name)
 {
-	while ((*s1 || *s2) && *s1++ == *s2++)
-		;
-	return (*--s1 - *--s2);
+	while (*name++)
+		ft_putchar(*(name - 1));
+	ft_putchar('\n');
+}
+
+int		main(int ac, char *av[])
+{
+	if (ac)
+		ft_print_program_name(av[0]);
+	return (0);
 }
