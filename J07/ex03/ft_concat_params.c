@@ -6,7 +6,7 @@
 /*   By: Bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/08 00:32:50 by Bfleury           #+#    #+#             */
-/*   Updated: 2016/03/08 01:14:01 by Bfleury          ###   ########.fr       */
+/*   Updated: 2016/03/08 03:47:19 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,14 @@ char			*ft_concat_params(int argc, char **argv)
 	length += (argc - 1);
 	if (!(result = (char*)malloc(sizeof(char) * length)))
 		return (NULL);
+	i = 0;
+	length = 0;
+	while (++i < argc)
+	{
+		if (i > 1)
+			result[length++] = '\n';
+		ft_strcpy((result + length), argv[i]);
+		length += ft_strlen(argv[i]);
+	}
+	return (result);
 }
